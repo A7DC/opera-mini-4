@@ -1,1 +1,0 @@
-# opera-mini-4
