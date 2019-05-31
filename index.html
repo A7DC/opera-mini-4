@@ -11,16 +11,830 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <meta name="theme-color" content="#fafafa">
-
+<link rel="stylesheet"
+  href="https://d36r55ftass5h5.cloudfront.net/style-min-c2a639b83189798b17c126bc5562f51483f42528.css">
   <style>
-    body {
-      background: red;
+    @media all and (max-width: 176px) {
+      html {
+          /* transform: scale(0.8); */
+      }
+      .event .event-bet {
+        display: block;
+      }
+
+      .event .event-bet a, .event .event-market-container a {
+        display: block;
+        width: auto;
+      }
+      
+      .bets-line {
+        display: block;
+      }
+
+      .event .bets-3 .event-bet {
+        display: block;
+        float: left;
+        width: auto;
+      }
+
+      .promo-cell, .deposit-cell, .bonus-cell, .refer-cell {
+        display: block;
+        float: left;
+        width: 20% !important;
+      }
+
+      .events-container.prematch h3, .events-container.live-soccer h3, .events-container.live-tennis h3 {
+        display: block;
+      }
+
+      .events-container.prematch h3:first-child, .events-container.live-soccer h3:first-child {
+        width: inherit;
+      }
+
+      .promo-row, .deposit-row {
+        display: block;
+      }
+
+      .bp-slider-left {
+        left: 0;
+      }
     }
   </style>
+  <script>
+    window.onload = function () {
+      var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+      var test = document.getElementById("test")
+      test.innerHTML = 'width: ' + w + ', ' + 'height: ' + h;
+      console.log(w, 'w')
+      console.log(h, 'h')
+    }
+
+  </script>
 </head>
 
 <body>
-  <p>Hello wfdorld! This is HTML5 Boilerplate.</p>
+<div id="test"></div>
+<div class="main-container bp-after-fixed" style="width:100%;">
+  <div class="main wrapper clearfix">
+    <div class="rightside-wide clearfix">
+      <div class="leftside">
+        <div class="logobar clearfix mobile-only" id="mobile-logobar">
+
+
+          <a href="."><img class="bp-logo" src="https://d36r55ftass5h5.cloudfront.net/m-4mke2uukxdtvfjt6im86l6yiv"
+              onerror="this.src='https://d36r55ftass5h5.cloudfront.net/m-7bj84wj8j2kq0u6c2imlvrg19'; this.onerror=null;"></a>
+
+          <a class="button-yellow" href="signup" style="float:right" id="logo-menu-signup">JOIN NOW</a><br><span
+            agi-template-field="3" class="cms-template-field"></span></div>
+        <noscript>
+          <div style="margin: 20px auto; width: 80%;"><span agi-template-field="3" class="cms-template-field">
+              <h2>JavaScript Required!</h2> To provide you with the best possible product, our website requires
+              JavaScript to function. betPawa delivers a unique experience with extensive live-betting, and
+              unfortunately we are not able to deliver that without the use of JavaScript. <h2>How to enable JavaScript
+              </h2> It might be possible for you to enable JavaScript in your browser. How this is done, varies from
+              browser to browser. [LinkExternal link="http://www.wikihow.com/Enable-JavaScript-on-an-Android-Phone
+              text="WikiHow.com has written a guide on how to enable JavaScript on Android Phones"]. For other devices,
+              please ask the store where you bought it, or try searching on <a href="http://www.google.com"
+                target="_blank">google.com</a>. <b>As soon as JavaScript is enabled, you will see the full website.
+                Welcome!</b>
+            </span></div>
+        </noscript>
+
+        <div class="searched-events"></div>
+        <div class="content-notice" style="display: none"></div>
+        <div agi-template-field="27" class="cms-template-field">
+          <div class="component-valueproposition">
+            <div class="content-wrapper landing">
+              <div class="value">
+                <h1>
+                  <div agi-template-field="7" class="cms-template-field">
+                    Why betPawa?
+                  </div>
+                </h1>
+                <div class="promo-container">
+                  <div class="promo-row">
+                    <div class="promo-cell">
+                      <div class="promo-icon-container">
+                        <img agi-template-field="11" agi-template-error="8" class="promo-icon cms-template-field"
+                          src="https://d36r55ftass5h5.cloudfront.net/m-at60hbdplmt5a0uv83q35ct0w">
+                      </div>
+                    </div>
+                    <div class="promo-cell">
+                      <div class="promo-icon-container">
+                        <img agi-template-field="12" agi-template-error="9" class="promo-icon cms-template-field"
+                          src="https://d36r55ftass5h5.cloudfront.net/m-91w6mw2j8rksdx6wr7qa2rvrz">
+                      </div>
+                    </div>
+                    <div class="promo-cell">
+                      <div class="promo-icon-container">
+                        <img agi-template-field="13" agi-template-error="10" class="promo-icon cms-template-field"
+                          src="https://d36r55ftass5h5.cloudfront.net/m-g1k511xxvi43bbhwa5viisev">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="promo-row">
+                    <div agi-template-field="14" class="promo-cell cms-template-field">
+                      Best prices and biggest win bonus
+                    </div>
+                    <div agi-template-field="15" class="promo-cell cms-template-field">
+                      No fees and no min bet
+                    </div>
+                    <div agi-template-field="16" class="promo-cell cms-template-field">
+                      24/7 Swahili speaking support
+                    </div>
+                  </div>
+                </div>
+                <div class="inner third">
+                  <a id="join-now-cms-template" class="button-yellow-full" href="javascript:void(0)"
+                    onclick="bpLogin.navigateToSignup();">Join now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-boosted" itemstoshow="7">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader"><a id="74" href="javascript:void(0);"
+                  class="context-info-slot"></a>
+                <div class="main-header Pawaboost">
+                  <h2 class="iconed">pawaBoost</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-551303"><a class="event-match"
+                  href="event-551303-tottenham-hotspur-liverpool-n">
+                  <div class="general-live-container first">
+                    <h3>Tottenham Hotspur - Liverpool (n)</h3>
+                    <h3>10:00<span class="time-format"> pm</span><span class="pawaboost-inline"><svg
+                          xmlns="http://www.w3.org/2000/svg" class="icon-status" role="img" viewBox="0 0 32 32">
+                          <title>Pawaboost</title>
+                          <path
+                            d="M26,11a.55.55,0,0,0-.48-.3H19.15L25.38.82a.52.52,0,0,0,0-.54A.53.53,0,0,0,24.93,0H16.4a.54.54,0,0,0-.48.29l-8,16a.53.53,0,0,0,0,.52.52.52,0,0,0,.45.26h5.48l-6,14.19a.54.54,0,0,0,.21.66.53.53,0,0,0,.69-.11L25.87,11.54A.52.52,0,0,0,26,11Z"
+                            fill="#ff5900"></path>
+                        </svg></span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>UEFA Champions League - Europe - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-60631142" class=""><span
+                            class="event-selection">1</span><span class="event-odds">4.45</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-60631143"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">3.60</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-60631144" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.89</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-551303-tottenham-hotspur-liverpool-n"
+                          class=""><span class="event-market">+81</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-promo">
+            <a
+              href="https://www.betpawa.co.tz/winner-athumani?utm_source=betpawa&amp;utm_medium=betpawafrontpage&amp;utm_campaign=tzwinnersalman"><img
+                class="package-media lazyautosizes lazyloaded" data-dynamic=""
+                data-srcset="https://d36r55ftass5h5.cloudfront.net/cmsUpload/m-3yswfggjvbfl4zunzu8jooho0_480x378.jpg 480w, https://d36r55ftass5h5.cloudfront.net/cmsUpload/m-3yswfggjvbfl4zunzu8jooho0_767x252.jpg 767w, https://d36r55ftass5h5.cloudfront.net/cmsUpload/m-3yswfggjvbfl4zunzu8jooho0_990x272.jpg 990w"
+                alt="TZ_Site_Banner_May19" data-sizes="auto"
+                src="https://d36r55ftass5h5.cloudfront.net/cmsUpload/m-3yswfggjvbfl4zunzu8jooho0_480x378.jpg"></a>
+          </div>
+          <div class="component-events" category="2" itemstoshow="5">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Football">
+                  <h2 class="iconed">Football</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556675"><a class="event-match"
+                  href="event-556675-athlone-limerick">
+                  <div class="general-live-container first">
+                    <h3>Athlone - Limerick</h3>
+                    <h3>09:45<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Ireland League Division 1 - Ireland - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62009040" class=""><span
+                            class="event-selection">1</span><span class="event-odds">4.70</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62009041"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">3.80</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-62009042" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.65</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556675-athlone-limerick" class=""><span
+                            class="event-market">+35</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556679"><a class="event-match"
+                  href="event-556679-cobh-ramblers-bray-wanderers">
+                  <div class="general-live-container first">
+                    <h3>Cobh Ramblers - Bray Wanderers</h3>
+                    <h3>09:45<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Ireland League Division 1 - Ireland - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62009147" class=""><span
+                            class="event-selection">1</span><span class="event-odds">5.50</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62009148"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">3.75</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-62009149" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.58</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556679-cobh-ramblers-bray-wanderers"
+                          class=""><span class="event-market">+35</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556682"><a class="event-match"
+                  href="event-556682-galway-fc-cabinteely">
+                  <div class="general-live-container first">
+                    <h3>Galway FC - Cabinteely</h3>
+                    <h3>09:45<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Ireland League Division 1 - Ireland - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62009220" class=""><span
+                            class="event-selection">1</span><span class="event-odds">2.50</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62009221"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">3.40</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-62009222" class=""><span class="event-selection">2</span><span
+                            class="event-odds">2.60</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556682-galway-fc-cabinteely" class=""><span
+                            class="event-market">+36</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556670"><a class="event-match"
+                  href="event-556670-shelbourne-longford">
+                  <div class="general-live-container first">
+                    <h3>Shelbourne - Longford</h3>
+                    <h3>09:45<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Ireland League Division 1 - Ireland - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62008895" class=""><span
+                            class="event-selection">1</span><span class="event-odds">2.75</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62008896"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">3.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-62008897" class=""><span class="event-selection">2</span><span
+                            class="event-odds">2.60</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556670-shelbourne-longford" class=""><span
+                            class="event-market">+35</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556683"><a class="event-match"
+                  href="event-556683-wexford-youths-drogheda-united">
+                  <div class="general-live-container first">
+                    <h3>Wexford Youths - Drogheda United</h3>
+                    <h3>09:45<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Ireland League Division 1 - Ireland - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62009258" class=""><span
+                            class="event-selection">1</span><span class="event-odds">4.95</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62009259"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">4.50</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-62009260" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.52</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556683-wexford-youths-drogheda-united"
+                          class=""><span class="event-market">+36</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Football<span class="indicator-yellow">+357</span></a>
+            </div>
+          </div>
+          <div class="component-live" algorithm="FRONT_PAGE" itemstoshow="3">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Live">
+                  <h2 class="iconed">Live Now</h2>
+                </div>
+              </div>
+              <div class="events-container live-soccer" id="Bp-Event-555923"><a class="event-match"
+                  href="event-555923-brondby-if-randers-fc">
+                  <div class="general-live-container first">
+                    <h3>Brondby IF - Randers FC</h3>
+                    <h3>3-2<span class="date-minutes">79'</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Denmark Superleague Play-off - Denmark - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-61838505" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.11</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-61838506"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">6.25</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-61838507" class=""><span class="event-selection">2</span><span
+                            class="event-odds">40.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-555923-brondby-if-randers-fc" class=""><span
+                            class="event-market">+13</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container live-soccer" id="Bp-Event-555718"><a class="event-match"
+                  href="event-555718-dinamo-bucharest-sc-fc-voluntari-sa">
+                  <div class="general-live-container first">
+                    <h3>Dinamo Bucharest - SC FC Voluntari SA</h3>
+                    <h3>0-0<span class="date-minutes">35'</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Romania Liga I - Romania - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-61751168" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.74</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-61751169"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">3.20</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-61751170" class=""><span class="event-selection">2</span><span
+                            class="event-odds">5.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-555718-dinamo-bucharest-sc-fc-voluntari-sa"
+                          class=""><span class="event-market">+35</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container live-soccer" id="Bp-Event-556495"><a class="event-match"
+                  href="event-556495-south-africa-u20-portugal-u20-n">
+                  <div class="general-live-container first">
+                    <h3>South Africa U20 - Portugal U20 (n)</h3>
+                    <h3>0-0<span class="date-minutes">6'</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>FIFA U20 World Cup - International - Football</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-61951958" class=""><span
+                            class="event-selection">1</span><span class="event-odds">17.00</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-61951959"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">7.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-61951960" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.21</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556495-south-africa-u20-portugal-u20-n"
+                          class=""><span class="event-market">+41</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Live<span class="indicator-yellow">+24</span></a>
+            </div>
+          </div>
+          <div class="component-winbonus">
+            <div class="content-wrapper landing">
+              <a href=" /win-bonus">
+                <div class="value">
+                  <h1>
+                    <div agi-template-field="32" class="cms-template-field">
+                      Double your win!
+                    </div>
+                  </h1>
+                  <div class="foreword">
+                    <div agi-template-field="33" class="cms-template-field">
+                      Tanzania's best win bonus, up to 100% on top!
+                    </div>
+                    <div class="promo-container">
+                      <div class="promo-row">
+                        <div class="promo-cell">
+                          <div class="promo-icon-container">
+                            <img agi-template-field="41" agi-template-error="42" class="bonus-icon cms-template-field"
+                              src="https://d36r55ftass5h5.cloudfront.net/m-aavyj5vm5gc41x97ktsql4gne">
+                          </div>
+                        </div>
+                        <div class="promo-cell">
+                          <div class="promo-icon-container">
+                            <img agi-template-field="38" agi-template-error="39" class="bonus-icon cms-template-field"
+                              src="https://d36r55ftass5h5.cloudfront.net/m-8nur77346ik2i9mq2zmqfhtn1">
+                          </div>
+                        </div>
+                        <div class="promo-cell">
+                          <div class="promo-icon-container">
+                            <img agi-template-field="35" agi-template-error="36" class="bonus-icon cms-template-field"
+                              src="https://d36r55ftass5h5.cloudfront.net/m-713owitq5aov7r32h59gilio1">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promo-row">
+                        <div agi-template-field="40" class="promo-cell cms-template-field">
+                          for 5-9 legs
+                        </div>
+                        <div agi-template-field="37" class="promo-cell cms-template-field">
+                          for 10-19 legs
+                        </div>
+                        <div agi-template-field="34" class="promo-cell cms-template-field">
+                          for 20-30 legs
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="component-events" category="452" itemstoshow="3">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Tennis">
+                  <h2 class="iconed">Tennis</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556847"><a class="event-match"
+                  href="event-556847-b-bencic-v-kuzmova-v-azarenka-a-barty">
+                  <div class="general-live-container first">
+                    <h3>B. Bencic/V. Kuzmova - V. Azarenka/A. Barty</h3>
+                    <h3>12:00<span class="time-format"> pm</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>French Open, Grand Slam - International - Tennis</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62067071" class=""><span
+                            class="event-selection">1</span><span class="event-odds">4.25</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62067072"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.18</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556847-b-bencic-v-kuzmova-v-azarenka-a-barty"
+                          class=""><span class="event-market">+1</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556860"><a class="event-match"
+                  href="event-556860-dusan-lajovic-alexander-zverev">
+                  <div class="general-live-container first">
+                    <h3>Dusan Lajovic - Alexander Zverev</h3>
+                    <h3>12:00<span class="time-format"> pm</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>French Open, Grand Slam - International - Tennis</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62067274" class=""><span
+                            class="event-selection">1</span><span class="event-odds">3.80</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62067275"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.22</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556860-dusan-lajovic-alexander-zverev"
+                          class=""><span class="event-market">+12</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556849"><a class="event-match"
+                  href="event-556849-e-mertens-a-sabalenka-o-kalashnikova-r-peterson">
+                  <div class="general-live-container first">
+                    <h3>E. Mertens/A. Sabalenka - O. Kalashnikova/R. Peterson</h3>
+                    <h3>12:00<span class="time-format"> pm</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>French Open, Grand Slam - International - Tennis</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62067102" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.23</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62067103"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">3.75</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a
+                          href="event-556849-e-mertens-a-sabalenka-o-kalashnikova-r-peterson" class=""><span
+                            class="event-market">+1</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Tennis<span class="indicator-yellow">+16</span></a>
+            </div>
+          </div>
+          <div class="component-events" category="3" itemstoshow="2">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Basketball">
+                  <h2 class="iconed">Basketball</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556736"><a class="event-match"
+                  href="event-556736-emporio-armani-milano-dinamo-basket-sassari">
+                  <div class="general-live-container first">
+                    <h3>Emporio Armani Milano - Dinamo Basket Sassari</h3>
+                    <h3>09:45<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Italy Lega 1 Basket - Italy - Basketball</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62019620" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.37</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62019621"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">2.90</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a
+                          href="event-556736-emporio-armani-milano-dinamo-basket-sassari" class=""><span
+                            class="event-market">+35</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556795"><a class="event-match"
+                  href="event-556795-blu-basket-treviglio-de-longhi-treviso">
+                  <div class="general-live-container first">
+                    <h3>Blu Basket Treviglio - De Longhi Treviso</h3>
+                    <h3>10:00<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Italy A2 Gold - Italy - Basketball</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62048586" class=""><span
+                            class="event-selection">1</span><span class="event-odds">2.30</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62048587"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.57</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556795-blu-basket-treviglio-de-longhi-treviso"
+                          class=""><span class="event-market">+34</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Basketball<span class="indicator-yellow">+23</span></a>
+            </div>
+          </div>
+          <div class="component-events" category="453" itemstoshow="2">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Rugby">
+                  <h2 class="iconed">Rugby</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556773"><a class="event-match"
+                  href="event-556773-racing-92-la-rochelle">
+                  <div class="general-live-container first">
+                    <h3>Racing 92 - La Rochelle</h3>
+                    <h3>10:00<span class="time-format"> pm</span><span class="date-minutes">Fri 31/05</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>France Top 14 - France - Rugby</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62048074" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.35</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62048075"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">23.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-62048076" class=""><span class="event-selection">2</span><span
+                            class="event-odds">3.35</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556773-racing-92-la-rochelle" class=""><span
+                            class="event-market">+3</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-555911"><a class="event-match"
+                  href="event-555911-sunwolves-brumbies">
+                  <div class="general-live-container first">
+                    <h3>Sunwolves - Brumbies</h3>
+                    <h3>08:15<span class="time-format"> am</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Super Rugby - International - Rugby</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-61832744" class=""><span
+                            class="event-selection">1</span><span class="event-odds">5.50</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-61832745"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">29.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-61832746" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.15</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-555911-sunwolves-brumbies" class=""><span
+                            class="event-market">+8</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Rugby<span class="indicator-yellow">+6</span></a>
+            </div>
+          </div>
+          <div class="component-events" category="459" itemstoshow="2"></div>
+          <div class="component-events" category="460" itemstoshow="2"></div>
+          <div class="component-events" category="461" itemstoshow="2">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Volleyball">
+                  <h2 class="iconed">Volleyball</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556777"><a class="event-match"
+                  href="event-556777-canada-bulgaria">
+                  <div class="general-live-container first">
+                    <h3>Canada - Bulgaria</h3>
+                    <h3>12:10<span class="time-format"> am</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Men's Nations League - International - Volleyball</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62048135" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.49</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62048136"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">2.45</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556777-canada-bulgaria" class=""><span
+                            class="event-market">+3</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-556772"><a class="event-match"
+                  href="event-556772-argentina-portugal">
+                  <div class="general-live-container first">
+                    <h3>Argentina - Portugal</h3>
+                    <h3>03:10<span class="time-format"> am</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>Men's Nations League - International - Volleyball</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-2">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-62048070" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.04</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-62048071"
+                          class=""><span class="event-selection">2</span><span
+                            class="event-odds">8.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-556772-argentina-portugal" class=""><span
+                            class="event-market">+3</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Volleyball<span class="indicator-yellow">+8</span></a>
+            </div>
+          </div>
+          <div class="component-events" category="462" itemstoshow="2">
+            <div class="block event front">
+              <div class="content-wrapper" id="mainHeader">
+                <div class="main-header Cricket">
+                  <h2 class="iconed">Cricket</h2>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-555824"><a class="event-match"
+                  href="event-555824-new-zealand-sri-lanka">
+                  <div class="general-live-container first">
+                    <h3>New Zealand - Sri Lanka</h3>
+                    <h3>12:30<span class="time-format"> pm</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>ICC World Cup - International - Cricket</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-61822006" class=""><span
+                            class="event-selection">1</span><span class="event-odds">1.21</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-61822007"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">80.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-61822008" class=""><span class="event-selection">2</span><span
+                            class="event-odds">3.90</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-555824-new-zealand-sri-lanka" class=""><span
+                            class="event-market">+1</span></a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="events-container prematch" id="Bp-Event-555806"><a class="event-match"
+                  href="event-555806-afghanistan-australia">
+                  <div class="general-live-container first">
+                    <h3>Afghanistan - Australia</h3>
+                    <h3>03:30<span class="time-format"> pm</span><span class="date-minutes">Sat 01/06</span></h3>
+                  </div>
+                  <div class="general-live-container second">
+                    <h4>ICC World Cup - International - Cricket</h4>
+                  </div>
+                </a>
+                <div class="events-sub-container">
+                  <div class="event-bets bets-3">
+                    <div class="bets-line"><span class="event-bet"><a id="Bp-Price-61821752" class=""><span
+                            class="event-selection">1</span><span class="event-odds">8.25</span></a></span><span
+                        class="event-bet-spacer-sm"></span><span class="event-bet"><a id="Bp-Price-61821753"
+                          class=""><span class="event-selection">X</span><span
+                            class="event-odds">80.00</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-bet"><a id="Bp-Price-61821754" class=""><span class="event-selection">2</span><span
+                            class="event-odds">1.04</span></a></span><span class="event-bet-spacer-sm"></span><span
+                        class="event-market-container"><a href="event-555806-afghanistan-australia" class=""><span
+                            class="event-market">+1</span></a></span></div>
+                  </div>
+                </div>
+              </div><a href="javascript:void(0);" class="underline eventcount"
+                style="display:block; text-align: center;">More Cricket<span class="indicator-yellow">+7</span></a>
+            </div>
+          </div>
+          <div class="component-events" category="454" itemstoshow="2"></div>
+        </div>
+        <div class="events-wrapper"></div>
+      </div>
+      <!-- Slider Right Betslip BEGIN -->
+      <div class="bp-slider bp-slip bp-slider-vertical bp-slider-right js-only" id="right-slide-betslips">
+        <div id="Bonus-Box" style="display: none;" class="bonusbox"></div>
+        <div class="bp-slip-wrapper" id="bet_initial">
+          <div class="bp-slip-top clearfix">
+            <div class="balance">
+              <span class="title">Your Balance:<span class="hideme"><a href="javascript:void(0);" id="hide-slip"
+                    class="only-for-mobile context-modal-close"></a></span></span>
+              <span class="count">Not logged in - <a class="underline" href="signup" id="join-now-link">Join
+                  Now</a>&nbsp;or <a class="underline" href="login#r=/" id="secondarySlot">Log In</a></span>
+            </div>
+          </div>
+          <div class="bp-slip-content">
+            <div class="hidden notify notice" id="Bp-Leg-Bonus-Info"></div>
+            <ul class="bp-bets"></ul>
+          </div>
+          <div class="bp-slip-bottom">
+            <form action="" id="bet-submit-form" class="edit">
+              <div class="table accept-notice">
+                <div class="row">
+                  <div><label class="radio" for="Accept-Any-Price-Checkbox"><span>Accept <a class="underline"
+                          href="accept-odds-changes" target="_blank" style="display: inline-block;">any odds
+                          changes?</a></span></label><button type="button" class="indicator-green-blank"
+                      value="AcceptAnyPrice" id="Accept-Any-Price-Checkbox">No</button></div>
+                </div>
+              </div>
+              <div class="element clearfix"><span class="entry-2"><input type="number" pattern="[0-9]*"
+                    name="stake-input" id="Bp-Stake-Input" placeholder="Your stake..."></span><span
+                  class="entry-2"><span class="balance right"><span class="title" id="Bp-Total-Odds">Odds:
+                      <b>-</b></span><span class="title" id="Bp-Total-Winnings"></span><span class="title"
+                      id="Bp-Bonus-Win-Amount"></span><span class="title" id="Bp-Total-Winnings-Post-Tax"></span><span
+                      class="title" id="Bp-Total-Win-Amount"></span></span></span></div>
+              <div id="Coupon-Status-Message" style="display: none;"></div>
+              <div class="social-bet-btn-container">
+                <div class="element social-bet-placed"><a class="button-facebook-full" href="javascript:void(0)"
+                    target="_blank" style="display: none;"><span>Share</span></a></div>
+                <div class="element social-bet-placed"><a class="button-whatsapp-full" href="javascript:void(0)"
+                    target="_blank" style="display: none;"><span>Share</span></a></div>
+              </div>
+              <div class="element social-bet-placed-right"><a class="button-twitter-full" href="javascript:void(0)"
+                  target="_blank" style="display: none;"><span>Share</span></a></div>
+              <div class="reload-items centered eight-px-top-margin"><a id="Bp-Betslip-Reload-Items"
+                  class="info underline" href="javascript:void(0)" style="display: none;">Load Previous Betslip</a>
+              </div>
+              <div class="element eight-px-top-margin"><input type="submit" id="bp-place-bet"
+                  class="button-green-full disabled" value="Place bet" disabled="disabled"><input type="submit"
+                  id="bp-reload-bet" class="button-green-full" value="RELOAD" style="display: none;"><input
+                  type="button" id="bp-place-another" class="button-green-full" value="Place another bet"
+                  style="display: none;"></div>
+              <div class="element info-right"><span><a href="javascript:void(0);" id="bp-clear-slip" class="underline"
+                    style="display: none;">Clear slip</a></span></div>
+            </form>
+          </div>
+          <div class="bp-slip-bottom">
+            <div class="row admin-event-id"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Right Betslip END -->
+
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
