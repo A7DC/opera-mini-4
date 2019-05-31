@@ -18,13 +18,20 @@
       html {
           /* transform: scale(0.8); */
       }
-      .event .event-bet {
+
+      .events-container {
+        float: left;
+      }
+
+      .event .event-bet, .event-bets, .event-bets-jp {
         display: block;
+        float: left;
       }
 
       .event .event-bet a, .event .event-market-container a {
         display: block;
-        width: auto;
+        /* width: auto; */
+        float: left;
       }
       
       .bets-line {
@@ -43,7 +50,7 @@
         width: 20% !important;
       }
 
-      .events-container.prematch h3, .events-container.live-soccer h3, .events-container.live-tennis h3 {
+      .events-container.prematch h3, .events-container.live-soccer h3, .events-container.live-tennis h3, .general-live-container.second {
         display: block;
       }
 
@@ -74,14 +81,51 @@
       }
 
       .event .event-market {
-        background: none;
-        color: #76c036;
-        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
       }
 
-      .event .bets-2 .event-bet {
+      .event .bets-3 .event-bet {
+        float: left;
+        margin-right: 4px !important;
+      }
+
+      .events-sub-container,
+      .events-container h3,
+      .general-live-container.second,
+      .events-container.prematch .events-sub-container h4:first-child,
+      .events-container.live-soccer .events-sub-container h4:first-child,
+      .events-container.live-tennis .events-sub-container h4:first-child {
+        padding: 0 4px;
+      }
+
+      .events-container .event-match h4:first-child, .event-odds {
+        padding: 0;
+      }
+
+      .event .event-bet .event-odds {
+        padding-bottom: 6px;
+      }
+
+      .event .event-bet .event-odds {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .event-market-container {
         float: left;
       }
+
+      .event-bet, .event-market-container, .event .bets-2 .event-bet {
+        width: 30.9%;
+        margin-right: 4px;
+      }
+
+      .event .event-bet a, .event-market-container a{
+        width: 100%;
+      }
+      
     }
   </style>
   <script>
@@ -94,16 +138,6 @@
         test.innerHTML = 'width: ' + w + ', ' + 'height: ' + h;
       }
 
-      function eventMarketLinks () {
-        var eventMarkets = document.getElementsByClassName('event-market')
-
-        for (var i = 0; i < eventMarkets.length; i++) {
-          console.log(eventMarkets[i], 'i');
-          eventMarkets[i].innerHTML += ' more markets';
-        }
-      }
-
-      eventMarketLinks()
       getViewport()
 
     }
