@@ -1,4 +1,4 @@
-# Project Title
+# Opera mini 4 testing for emulators 
 
 Testing out how feature phones scale and render 
 
