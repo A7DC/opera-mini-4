@@ -21,3 +21,7 @@ lt --port portnumber // use the port number that yarn gives you, mine is 8080 bu
 ```
 
 Once you've completed the steps, terminal will output a web address such as `https://tender-chicken-5.localtunnel.me`. Enter this address into your emulator and you will be able to view the local code.
+
+### Changes 
+
+If you want to make changes, just make a branch and then create a PR.
