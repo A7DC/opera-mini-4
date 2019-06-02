@@ -15,6 +15,15 @@
   href="https://d36r55ftass5h5.cloudfront.net/style-min-c2a639b83189798b17c126bc5562f51483f42528.css">
   <style>
     @media all and (max-width: 176px) {
+
+      #mainHeader .main-header {
+        background-size: 16px 16px !important;
+      }
+
+      * {
+        font-size: 10px !important;
+      }
+
       html {
           /* transform: scale(0.8); */
       }
@@ -125,6 +134,16 @@
       .event .event-bet a, .event-market-container a{
         width: 100%;
       }
+
+      .sidebar-test {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        height: 100%;
+        background: red;
+      }
       
     }
   </style>
@@ -147,6 +166,7 @@
 
 <body>
 <div id="test"></div>
+<div class="sidebar-test"></div>
 <div class="main-container bp-after-fixed" style="width:100%;">
   <div class="main wrapper clearfix">
     <div class="rightside-wide clearfix">
