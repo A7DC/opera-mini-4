@@ -60,6 +60,11 @@
         }
       }
   </script> -->
+  <style>
+      .mla {
+        margin-left: auto;
+      }
+    </style>
   <script language="JavaScript">
 
   window.onload = function(){
@@ -95,21 +100,30 @@ app.appendChild(container)
           console.log(match, 'match')
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
+          
           const odds = match.sites[0].odds
 
+          // styles
+
+          const cssClasses = {
+            team: 'flex flex-row',
+            radio: 'mla',
+            title: 'f4'
+          }
+
           const markup = `
-            <div class='mb3 debug'>
-              <div>
-                  <h2>${match.teams[0]}</h2>
-                  <span>${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
+            <div class='mb3 flex flex-column bg-near-white'>
+              <div class="${cssClasses.team}">
+                  <h2 class="${cssClasses.title}">${match.teams[0]}</h2>
+                  <span class="${cssClasses.radio}">${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
               </div>
-              <div>
-                  <h2>Draw</h2>
-                  <span>${odds.h2h[1]}<input type="radio" name="${index}" value="1"></span>
+              <div class="${cssClasses.team}">
+                  <h2 class="${cssClasses.title}">Draw</h2>
+                  <span class="${cssClasses.radio}">${odds.h2h[1]}<input type="radio" name="${index}" value="1"></span>
               </div>
-              <div>
-                  <h2>${match.teams[1]}</h2>
-                  <span>${odds.h2h[2]}<input type="radio" name="${index}" value="1"></span>
+              <div class="${cssClasses.team}">
+                  <h2 class="${cssClasses.title}">${match.teams[1]}</h2>
+                  <span class="${cssClasses.radio}">${odds.h2h[2]}<input type="radio" name="${index}" value="1"></span>
               </div>
             </div>
           `;
@@ -133,13 +147,6 @@ app.appendChild(container)
   }
 
   </script>
-  <style>
-    .page{
-      height: 180px;
-      border-bottom: 1px solid red; 
-    }
-
-  </style>
 </head>
 
 <body>
