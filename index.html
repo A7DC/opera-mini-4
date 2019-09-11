@@ -70,12 +70,18 @@
   window.onload = function(){
 //// UI templates
 
-var app = document.getElementById('root')
+alert(2)
+
+    var app = document.getElementById('root')
 
 
-var container = document.createElement('div')
-container.setAttribute('class', 'container')
-app.appendChild(container)
+    var container = document.createElement('div')
+    container.setAttribute('class', 'container')
+    app.appendChild(container)
+
+    cardHeight = window.innerHeight
+
+    console.log(cardHeight, 'cardHeight')
 
     //// Requests   
 
@@ -112,7 +118,7 @@ app.appendChild(container)
           }
 
           const markup = `
-            <div class='mb3 flex flex-column bg-near-white'>
+            <div class='mb3 flex flex-column bg-near-white' style="height: ${cardHeight}px">
               <div class="${cssClasses.team}">
                   <h2 class="${cssClasses.title}">${match.teams[0]}</h2>
                   <span class="${cssClasses.radio}">${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
@@ -150,7 +156,10 @@ app.appendChild(container)
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+
+    hello world
+  </div>
 </body>
 
 </html>
