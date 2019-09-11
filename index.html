@@ -28,6 +28,8 @@
   <meta name="theme-color" content="#fafafa">
 <link rel="stylesheet"
   href="https://d36r55ftass5h5.cloudfront.net/style-min-c2a639b83189798b17c126bc5562f51483f42528.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css'>
+
   <!-- <script>
 
     window.onload = function () {
@@ -89,15 +91,26 @@ app.appendChild(container)
       // })
 
       if (request.status >= 200 && request.status < 400) {
-        data.data.forEach(match => {
+        data.data.forEach((match, index) => {
           console.log(match, 'match')
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
+          const odds = match.sites[0].odds
 
           const markup = `
-            <div>
-              <h2>${match.teams[0]}</h2>
-              <h2>${match.teams[1]}</h2>
+            <div class='mb3 debug'>
+              <div>
+                  <h2>${match.teams[0]}</h2>
+                  <span>${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
+              </div>
+              <div>
+                  <h2>Draw</h2>
+                  <span>${odds.h2h[1]}<input type="radio" name="${index}" value="1"></span>
+              </div>
+              <div>
+                  <h2>${match.teams[1]}</h2>
+                  <span>${odds.h2h[2]}<input type="radio" name="${index}" value="1"></span>
+              </div>
             </div>
           `;
             
