@@ -73,9 +73,9 @@ app.appendChild(container)
     //// Requests   
 
     // Create a request variable and assign a new XMLHttpRequest object to it.
-    var request = new XMLHttpRequest()
+    const request = new XMLHttpRequest()
 
-    var API = 'https://api.the-odds-api.com/v3/odds/?sport=soccer_epl&region=uk&apiKey=defc82153a6665e798e155ee81c31924'
+    const API = 'https://api.the-odds-api.com/v3/odds/?sport=soccer_epl&region=uk&apiKey=defc82153a6665e798e155ee81c31924'
 
     // Open a new connection, using the GET request on the URL endpoint
     request.open('GET', API, true)
@@ -94,16 +94,17 @@ app.appendChild(container)
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
 
-          const h1 = document.createElement('h1')
-          h1.textContent = match.teams
-
-          // const p = document.createElement('p')
-          // match.description = match.description.substring(0, 300)
-          // p.textContent = `${match.description}...`
+          const markup = `
+            <div>
+              <h2>${match.teams[0]}</h2>
+              <h2>${match.teams[1]}</h2>
+            </div>
+          `;
+            
+          card.innerHTML = markup
+          console.log(card, 'card')
 
           container.appendChild(card)
-          card.appendChild(h1)
-          // card.appendChild(p)
         })
       } else {
         const errorMessage = document.createElement('marquee')
