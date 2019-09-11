@@ -59,55 +59,77 @@
       }
   </script> -->
   <script language="JavaScript">
-    function toggle(source) {
-      checkboxes = document.getElementsByName('foo');
-      for(var i=0, n=checkboxes.length;i<n;i++) {
-        checkboxes[i].checked = source.checked;
+
+  window.onload = function(){
+//// UI templates
+
+var app = document.getElementById('root')
+
+
+var container = document.createElement('div')
+container.setAttribute('class', 'container')
+app.appendChild(container)
+
+    //// Requests   
+
+    // Create a request variable and assign a new XMLHttpRequest object to it.
+    var request = new XMLHttpRequest()
+
+    var API = 'https://api.the-odds-api.com/v3/odds/?sport=soccer_epl&region=uk&apiKey=defc82153a6665e798e155ee81c31924'
+
+    // Open a new connection, using the GET request on the URL endpoint
+    request.open('GET', API, true)
+
+    request.onload = function () {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      // data.data.forEach(match => {
+      //   // Log each movie's title
+      //   console.log(match, 'match')
+      // })
+
+      if (request.status >= 200 && request.status < 400) {
+        data.data.forEach(match => {
+          console.log(match, 'match')
+          const card = document.createElement('div')
+          card.setAttribute('class', 'card')
+
+          const h1 = document.createElement('h1')
+          h1.textContent = match.teams
+
+          // const p = document.createElement('p')
+          // match.description = match.description.substring(0, 300)
+          // p.textContent = `${match.description}...`
+
+          container.appendChild(card)
+          card.appendChild(h1)
+          // card.appendChild(p)
+        })
+      } else {
+        const errorMessage = document.createElement('marquee')
+        errorMessage.textContent = `Gah, it's not working!`
+        app.appendChild(errorMessage)
       }
     }
 
-    function onClick() {
-      checkboxes = document.getElementsByName('foo');
-      for(var i=0, n=checkboxes.length;i<n;i++) {
-        console.log(checkboxes[i].value, 'checkboxes[i].value')
-      }
-    }
+    // Send request
+    request.send()
+
+
+  }
+
   </script>
   <style>
-.page{
-  height: 180px;
-  border-bottom: 1px solid red; 
-}
+    .page{
+      height: 180px;
+      border-bottom: 1px solid red; 
+    }
 
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="market">Juve <span class="market2">1.20 <input type="radio" name="gamename4" value="1"></span></div><br>
-    <div class="market">Draw <span class="market2">1.20 <input type="radio" name="gamename4" value="X"> </span></div> <br>
-    <div class="market">Inter <span class="market2">1.20 <input type="radio" name="gamename4" value="2"></span></div>
-  </div>
-  <div class="page">
-      <div class="market">Juve <span class="market2">1.20 <input type="radio" name="gamename4" value="1"></span></div><br>
-      <div class="market">Draw <span class="market2">1.20 <input type="radio" name="gamename4" value="X"> </span></div> <br>
-      <div class="market">Inter <span class="market2">1.20 <input type="radio" name="gamename4" value="2"></span></div>
-  </div>
-  <div class="page">
-      <div class="market">Juve <span class="market2">1.20 <input type="radio" name="gamename4" value="1"></span></div><br>
-      <div class="market">Draw <span class="market2">1.20 <input type="radio" name="gamename4" value="X"> </span></div> <br>
-      <div class="market">Inter <span class="market2">1.20 <input type="radio" name="gamename4" value="2"></span></div>
-  </div>
-  <div class="page">
-      <div class="market">Juve <span class="market2">1.20 <input type="radio" name="gamename4" value="1"></span></div><br>
-      <div class="market">Draw <span class="market2">1.20 <input type="radio" name="gamename4" value="X"> </span></div> <br>
-      <div class="market">Inter <span class="market2">1.20 <input type="radio" name="gamename4" value="2"></span></div>
-  </div>
-  <div class="page">
-      <div class="market">Juve <span class="market2">1.20 <input type="radio" name="gamename4" value="1"></span></div><br>
-      <div class="market">Draw <span class="market2">1.20 <input type="radio" name="gamename4" value="X"> </span></div> <br>
-      <div class="market">Inter <span class="market2">1.20 <input type="radio" name="gamename4" value="2"></span></div>
-  </div>
+  <div id="root"></div>
 </body>
 
 </html>
