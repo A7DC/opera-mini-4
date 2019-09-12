@@ -70,95 +70,85 @@
   window.onload = function(){
 //// UI templates
 
-alert(2)
-
     var app = document.getElementById('root')
 
-
+    // create container
     var container = document.createElement('div')
-    container.setAttribute('class', 'container')
+    container.setAttribute('class', 'mb3 flex flex-column bg-near-white')
     app.appendChild(container)
 
-    cardHeight = window.innerHeight
+    var API = 'https://api.the-odds-api.com/v3/odds/?sport=soccer_epl&region=uk&apiKey=defc82153a6665e798e155ee81c31924'
 
-    console.log(cardHeight, 'cardHeight')
+    var xhr = new XMLHttpRequest();
 
-    //// Requests   
+    var windowHeight = window.outerHeight
+    
 
-    // Create a request variable and assign a new XMLHttpRequest object to it.
-    const request = new XMLHttpRequest()
-
-    const API = 'https://api.the-odds-api.com/v3/odds/?sport=soccer_epl&region=uk&apiKey=defc82153a6665e798e155ee81c31924'
-
-    // Open a new connection, using the GET request on the URL endpoint
-    request.open('GET', API, true)
-
-    request.onload = function () {
-      // Begin accessing JSON data here
-      var data = JSON.parse(this.response)
-      // data.data.forEach(match => {
-      //   // Log each movie's title
-      //   console.log(match, 'match')
-      // })
-
-      if (request.status >= 200 && request.status < 400) {
-        data.data.forEach((match, index) => {
-          console.log(match, 'match')
-          const card = document.createElement('div')
-          card.setAttribute('class', 'card')
+    xhr.onreadystatechange = function () {
+      
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          var data = JSON.parse(xhr.responseText)
           
-          const odds = match.sites[0].odds
-
-          // styles
-
-          const cssClasses = {
-            team: 'flex flex-row',
-            radio: 'mla',
-            title: 'f4'
-          }
-
-          const markup = `
-            <div class='mb3 flex flex-column bg-near-white' style="height: ${cardHeight}px">
-              <div class="${cssClasses.team}">
-                  <h2 class="${cssClasses.title}">${match.teams[0]}</h2>
-                  <span class="${cssClasses.radio}">${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
-              </div>
-              <div class="${cssClasses.team}">
-                  <h2 class="${cssClasses.title}">Draw</h2>
-                  <span class="${cssClasses.radio}">${odds.h2h[1]}<input type="radio" name="${index}" value="1"></span>
-              </div>
-              <div class="${cssClasses.team}">
-                  <h2 class="${cssClasses.title}">${match.teams[1]}</h2>
-                  <span class="${cssClasses.radio}">${odds.h2h[2]}<input type="radio" name="${index}" value="1"></span>
-              </div>
-            </div>
-          `;
+          
+          var array = data.data
+          for (var index = 0; index < array.length; index++) {
             
-          card.innerHTML = markup
-          console.log(card, 'card')
+            var element = array[index];
+            console.log(index, 'index')
 
-          container.appendChild(card)
-        })
-      } else {
-        const errorMessage = document.createElement('marquee')
-        errorMessage.textContent = `Gah, it's not working!`
-        app.appendChild(errorMessage)
+            var card = document.createElement('div')
+            card.setAttribute('class', 'card')
+
+            var odds = element.sites[0].odds
+
+            var markup = 
+              "<div class='flex flex-column bg-near-white mb3' style='height:" + windowHeight + "px' >" +
+
+                "<div class='flex flex-row'>" + 
+                    // <h2 class="${cssClasses.title}">${match.teams[0]}</h2>
+                    "<h2 class='f4'>" + element.teams[0] + "</h2>" +
+                    // <span class="${cssClasses.radio}">${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
+                    "<span class='mla'>" + odds.h2h[0] + "<input type='radio' name=' " + index + "' value='1'>" + "</span>" +
+                "</div>" + 
+
+                "<div class='flex flex-row'>" + 
+                    // <h2 class="${cssClasses.title}">${match.teams[0]}</h2>
+                    "<h2 class='f4'>" + element.teams[1] + "</h2>" +
+                    // <span class="${cssClasses.radio}">${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
+                    "<span class='mla'>" + odds.h2h[1] + "<input type='radio' name=' " + index + "' value='1'>" + "</span>" +
+                "</div>" + 
+
+                "<div class='flex flex-row'>" + 
+                    // <h2 class="${cssClasses.title}">${match.teams[0]}</h2>
+                    "<h2 class='f4'>" + element.teams[2] + "</h2>" +
+                    // <span class="${cssClasses.radio}">${odds.h2h[0]}<input type="radio" name="${index}" value="1"></span>
+                    "<span class='mla'>" + odds.h2h[2] + "<input type='radio' name=' " + index + "' value='1'>" + "</span>" +
+                "</div>" + 
+
+              "</div>"
+
+              card.innerHTML = markup
+
+              container.appendChild(card)
+            
+          }
+        } 
+        if (xhr.status == 404) {
+          card.innerHTML = "<p>Not working</p>"
+        } 
       }
+
     }
 
-    // Send request
-    request.send()
-
-
+    xhr.open('get', API, true);
+    xhr.send();
   }
-
   </script>
 </head>
 
 <body>
   <div id="root">
-
-    hello world
   </div>
 </body>
 
